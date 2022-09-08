@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping(path="api/transaction")
@@ -24,22 +23,22 @@ public class TransactionController {
         return transactionService.getTransactions();
     }
 
-    @GetMapping("type/{type}")
+    @GetMapping(path = "type/{type}")
     public List<Transaction> getTransactionsByType( @PathVariable("type") String type){
         return transactionService.getTransactionsByType(type);
     }
 
-    @GetMapping("actor/{actor}")
+    @GetMapping(path = "actor/{actor}")
     public List<Transaction> getTransactionsByActor( @PathVariable("actor") String actor){
         return transactionService.getTransactionsByActor(actor);
     }
 
-    @GetMapping("datavalue/{dataValue}")
+    @GetMapping(path = "datavalue/{dataValue}")
     public List<Transaction> getTransactionsByDataValue( @PathVariable("dataValue") String dataValue){
         return transactionService.getTransactionsByDataValue(dataValue);
     }
 
-    @GetMapping("betweendates")
+    @GetMapping(path = "betweendates")
     public List<Transaction> getTransactionsBetweenDates(
             @RequestParam("start")
             @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date start,
@@ -49,8 +48,8 @@ public class TransactionController {
     }
 
     @PostMapping(path = "create")
-    public void registerNewTransaction(@RequestBody Transaction transaction){
-        transactionService.addNewTransaction(transaction);
+    public void registerNewTransaction(@RequestBody TransactionDTO transactiondto){
+        transactionService.addNewTransaction(transactiondto);
     }
 
     @DeleteMapping(path = "delete/{transactionId}")

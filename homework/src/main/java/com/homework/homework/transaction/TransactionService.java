@@ -7,23 +7,26 @@ import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Service
 public class TransactionService {
 
     private final TransactionRepository transactionRepository;
+    @Autowired
+    private final TransactionMapper transactionMapper;
 
     @Autowired
-    public TransactionService(TransactionRepository transactionRepository) {
+    public TransactionService(TransactionRepository transactionRepository, TransactionMapper transactionMapper) {
         this.transactionRepository = transactionRepository;
+        this.transactionMapper = transactionMapper;
     }
 
     public List<Transaction> getTransactions(){
         return transactionRepository.findAll();
     }
 
-    public void addNewTransaction(Transaction transaction) {
+    public void addNewTransaction(TransactionDTO transactiondto) {
+        Transaction transaction = transactionMapper.convertDtoToEntity(transactiondto);
         transactionRepository.save(transaction);
     }
 
