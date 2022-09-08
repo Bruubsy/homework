@@ -48,12 +48,6 @@ public class TransactionController {
         return transactionService.getTransactionsBetweenDates(start,end);
     }
 
-    @GetMapping("testDate")
-    public void  testDate(
-            @RequestParam("start") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date start) {
-        System.out.println("it works");
-    }
-
     @PostMapping(path = "create")
     public void registerNewTransaction(@RequestBody Transaction transaction){
         transactionService.addNewTransaction(transaction);
@@ -67,9 +61,9 @@ public class TransactionController {
     @PutMapping(path = "update/{transactionId}")
     public void updateTransaction(
             @PathVariable("transactionId") Long transactionId,
-            @RequestParam(required = false) String type,
-            @RequestParam(required = false) String actor,
-            @RequestParam(required = false,value = "datavalue") String dataValue){
-        transactionService.updateTransaction(transactionId,type,actor, dataValue);
+            @RequestParam(required = false, value="type") String type,
+            @RequestParam(required = false, value="actor") String actor,
+            @RequestParam(required = false, value = "datavalue") String dataValue){
+        transactionService.updateTransaction(transactionId, type, actor, dataValue);
     }
 }

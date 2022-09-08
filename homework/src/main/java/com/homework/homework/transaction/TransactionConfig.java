@@ -34,7 +34,7 @@ public class TransactionConfig {
             Transaction transaction4 = new Transaction(
                     "type4",
                     "actor1",
-                    Map.of("key3","value3")
+                    Map.of("key4","value3")
             );
             repository.saveAll(List.of(transaction1,transaction2,transaction3,transaction4));
         };

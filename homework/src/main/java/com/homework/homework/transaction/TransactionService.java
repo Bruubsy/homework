@@ -30,21 +30,22 @@ public class TransactionService {
     public void deleteTransactionById(Long transactionId) {
         boolean transactionExists = transactionRepository.existsById(transactionId);
         if (!transactionExists){
-            throw new IllegalStateException("transaction with id "+transactionId+" does not exist");
+            throw new IllegalStateException("transaction with id " + transactionId + " does not exist");
         }
         transactionRepository.deleteById(transactionId);
     }
 
     @Transactional
     public void updateTransaction(Long transactionId, String type, String actor, String dataValue) {
-        Transaction transaction = transactionRepository.findById(transactionId).orElseThrow(() -> new IllegalStateException("transaction with id "+transactionId+" does not exist"));
+        Transaction transaction = transactionRepository.findById(transactionId).orElseThrow(() ->
+                new IllegalStateException("transaction with id " + transactionId + " does not exist"));
 
         if (type != null && type.length() >0 && !Objects.equals(transaction.getType(),type)){
             transaction.setType(type);
         }
 
         if (actor != null && actor.length() >0 && !Objects.equals(transaction.getActor(),actor)){
-            transaction.setType(actor);
+            transaction.setActor(actor);
         }
 
         if (dataValue != null && dataValue.length() >0 && !transaction.getData().containsValue(dataValue)){

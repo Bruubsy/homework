@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf36714b-b672-4744-a284-3e81a6bb02f7" name="Changes" comment="" />
+    <list default="true" id="cf36714b-b672-4744-a284-3e81a6bb02f7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/src/main/java/com/homework/homework/transaction/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/src/main/java/com/homework/homework/transaction/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/src/main/java/com/homework/homework/transaction/TransactionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/src/main/java/com/homework/homework/transaction/TransactionConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/src/main/java/com/homework/homework/transaction/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/src/main/java/com/homework/homework/transaction/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/src/main/java/com/homework/homework/transaction/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/src/main/java/com/homework/homework/transaction/TransactionService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -21,6 +30,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2EUENCvdfAanRxL7gCpFW1dS9f1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -78,16 +88,5 @@
       <updated>1662641720649</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/homework/src/main/java/com/homework/homework/transaction/TransactionService.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
